@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form styling</title>
+    <style>
+      #subscribe-form {
+        background-color: midnightblue;
+        padding: 20px;
+        border-radius: 30px 300px;
+        padding-left: 110px;
+      }
+
+      .form-heading {
+        color: white;
+        font-size: 27px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .input-email {
+        border-radius: 10px;
+        font-size: 30px;
+        padding: 10px;
+        padding-left: 50px;
+        border: none;
+        width: 500px;
+        background-image: url(images/at.svg);
+        background-size: 40px 40px;
+        background-repeat: no-repeat;
+        background-position: left;
+      }
+
+      .button-subscribe {
+        border-radius: 10px;
+        font-size: 30px;
+        padding: 10px;
+        background-color: #4dc3ff;
+        background-image: url(images/email-arrow-right.svg);
+        background-size: 50px 50px;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        color: transparent;
+      }
+
+      .checkbox-container {
+        display: flex;
+        align-items: center;
+        padding-top: 7px;
+      }
+
+      .checkbox-label {
+        font-size: 14px;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+
+      .checkbox-label a {
+        color: #4dc3ff;
+        text-decoration: none;
+      }
+
+      #terms-checkbox {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #4dc3ff;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      #terms-checkbox:checked {
+        background-color: #4dc3ff;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/url" id="subscribe-form">
+      <h2 class="form-heading">Join our newsletter list</h2>
+      <label>
+        <input
+          type="mail"
+          placeholder="e.g: john.doe@example.com"
+          required
+          autofocus
+          class="input-email"
+        />
+      </label>
+      <button class="button-subscribe">SUBSCRIBE</button>
+
+      <form action="/url">
+        <div class="checkbox-container">
+          <label class="checkbox-label"
+            >I have read and agree with
+            <a href="#">Terms and Conditions</a></label
+          >
+          <input type="checkbox" id="terms-checkbox" />
+        </div>
+      </form>
+    </form>
+  </body>
+</html>
